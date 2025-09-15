@@ -1,0 +1,49 @@
+# Source files
+src/
+tsconfig.json
+.eslintrc.json
+.prettierrc
+
+# Development files
+*.test.ts
+*.spec.ts
+test/
+tests/
+__tests__/
+
+# Configuration files
+.env*
+.vscode/
+.idea/
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# Documentation (except README.md)
+docs/
+*.md
+!README.md
+
+# Logs
+*.log
+logs/
+
+# Coverage
+coverage/
+.nyc_output
+
+# Temporary files
+*.tmp
+tmp/
+temp/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Cache
+.npm
+.eslintcache
+node_modules/ 

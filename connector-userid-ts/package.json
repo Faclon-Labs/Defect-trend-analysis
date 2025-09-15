@@ -1,0 +1,74 @@
+{
+  "name": "connector-userid-ts",
+  "version": "1.0.2",
+  "description": "TypeScript SDK for connecting to and interacting with the IoSense platform data services",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "npm run clean && tsc",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build && npm run test",
+    "start": "npm run build && node dist/index.js",
+    "dev": "ts-node --esm src/index.ts",
+    "test": "npm run build && node --test",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "typecheck": "tsc --noEmit",
+    "precommit": "npm run lint && npm run format:check && npm run typecheck",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perths/io_connect_ts.git"
+  },
+  "bugs": {
+    "url": "https://github.com/perths/io_connect_ts/issues"
+  },
+  "homepage": "https://github.com/perths/io_connect_ts#readme",
+  "keywords": [
+    "iosense",
+    "sdk",
+    "api",
+    "connector",
+    "data",
+    "sensors",
+    "iot",
+    "typescript",
+    "node",
+    "npm-package"
+  ],
+  "author": {
+    "name": "Henil Jain",
+    "email": "henil@faclon.com",
+    "url": ""
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "mqtt": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
